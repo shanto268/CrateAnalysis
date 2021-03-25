@@ -1874,7 +1874,7 @@ class MuDataFrame:
     def getChannelSumPlots(self, pdf=False, isBinned=True, nbin=50, amount=5):
         if isBinned:
             fig, axes = plt.subplots(nrows=4, ncols=1)
-            xmin, xmax = 180, 380
+            xmin, xmax = 160, 280
             nbins = self.getBins(xmin, xmax, nbin)
             plt.suptitle(
                 "Histogram of Sum of Channels in their Respective Trays")
