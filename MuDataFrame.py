@@ -36,7 +36,24 @@ from MuonDataFrame import *
 import copy
 
 
+def getXatZPlane_diffTDC(x1, x2, zplane, dsep):
+    x = (zplane / dsep) * (
+        getPhysicalUnitsFromDiffTDC(x1) -
+        getPhysicalUnitsFromDiffTDC(x2)) + getPhysicalUnitsFromDiffTDC(x1)
+    return x
+
+
+def getPhysicalUnitsFromDiffTDC(tdc):
+    return (55 / 130) * tdc
+
+
 def getCombinedMDFO(runStart, runEnd):
+    """
+    Inputs: runStart->int, runEnd->int
+    Output: MuDataFrame Object
+    Process: it combines the runfiles defined in the input from runStart to runEnd and
+             returns a comprehensice MuDataFrame Object with all the run information
+    """
     r1, r2 = runStart, runEnd
     lead_files = [
         "processed_data/run{}.csv".format(i) for i in range(r1, r2 + 1)
