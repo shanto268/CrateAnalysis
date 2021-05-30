@@ -35,7 +35,10 @@ class Notify():
         self.email(emailList, sms_list, subjectLine, emailContent)
 
     def sendShantoPdfEmail(self, pfile, cfile):
-        emailList = ["sadman-ahmed.shanto@ttu.edu"]
+        emailList = [
+            "sadman-ahmed.shanto@ttu.edu", "megan.r.cuevas@ttu.edu",
+            "clive.binu@ttu.edu", "samuel.cano@ttu.edu"
+        ]
         # emailList = ["sadman-ahmed.shanto@ttu.edu"]
         sms_list = ['8067900156@sms.mycricket.com']
         run = pfile.split("_")[-1].split(".")[0]
@@ -48,7 +51,8 @@ class Notify():
     def sendPdfEmail(self, pfile, cfile):
         emailList = [
             "sadman-ahmed.shanto@ttu.edu", "nural.akchurin@ttu.edu",
-            "shuichi.kunori@ttu.edu", "cristobal.moreno@ttu.edu", "gchisele@ttu.edu" , "Keiwun.turner@ttu.edu"
+            "shuichi.kunori@ttu.edu", "cristobal.moreno@ttu.edu",
+            "gchisele@ttu.edu", "Keiwun.turner@ttu.edu"
         ]
         # emailList = ["sadman-ahmed.shanto@ttu.edu"]
         sms_list = ['8067900156@sms.mycricket.com']
@@ -62,7 +66,8 @@ class Notify():
     def sendEmailRecovery(self, pfile, cfile):
         emailList = [
             "sadman-ahmed.shanto@ttu.edu", "nural.akchurin@ttu.edu",
-            "shuichi.kunori@ttu.edu", "cristobal.moreno@ttu.edu", "gchisele@ttu.edu" , "Keiwun.turner@ttu.edu"
+            "shuichi.kunori@ttu.edu", "cristobal.moreno@ttu.edu",
+            "gchisele@ttu.edu", "Keiwun.turner@ttu.edu"
         ]
         # emailList = ["sadman-ahmed.shanto@ttu.edu"]
         sms_list = ['8067900156@sms.mycricket.com']

@@ -28,5 +28,7 @@ if __name__ == "__main__":
         print("\nAssuming the file has been analyzed before.")
 
     mdfo = MuonDataFrame(ifile, isNew=iisNew, d1="last")
-    mdfo.generateAnaReport()
-    mdfo.getEmissionFile()
+    # mdfo.generateAnaReport()
+    mdfo.getCompleteCSVOutputFile()
+    # mdfo.getEmissionFile()
+    mdfo.sendReportEmail()
